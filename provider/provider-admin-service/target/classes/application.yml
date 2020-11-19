@@ -4,8 +4,8 @@ base:
 #      hostname: tidb.funtl.com
 #      port: 4000
     nacos:
-#      hostname: micheal.wang
-      hostname: 172.16.227.110
+      hostname: micheal.wang
+#      hostname: 172.16.227.110
       port: 8848
 
 spring:
