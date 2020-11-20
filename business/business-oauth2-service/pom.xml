@@ -85,26 +85,26 @@
         </dependency>
 
         <!-- Projects -->
-        <dependency>
-            <groupId>com.micheal.myshop.plus</groupId>
-            <artifactId>business-profile-feign</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.micheal.myshop.plus</groupId>-->
+<!--            <artifactId>business-profile-feign</artifactId>-->
+<!--            <version>${project.parent.version}</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.micheal.myshop.plus</groupId>
             <artifactId>provider-admin-api</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.micheal.myshop.plus</groupId>
-            <artifactId>cloud-message-api</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.micheal.myshop.plus</groupId>
-            <artifactId>cloud-message-feign</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.micheal.myshop.plus</groupId>-->
+<!--            <artifactId>cloud-message-api</artifactId>-->
+<!--            <version>${project.parent.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.micheal.myshop.plus</groupId>-->
+<!--            <artifactId>cloud-message-feign</artifactId>-->
+<!--            <version>${project.parent.version}</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

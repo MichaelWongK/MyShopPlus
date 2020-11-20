@@ -56,16 +56,16 @@
             <artifactId>commons-dto</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.micheal.myshop.plus</groupId>
-            <artifactId>commons-utils</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.micheal.myshop.plus</groupId>
-            <artifactId>configuration-feign</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.micheal.myshop.plus</groupId>-->
+<!--            <artifactId>commons-utils</artifactId>-->
+<!--            <version>${project.parent.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.micheal.myshop.plus</groupId>-->
+<!--            <artifactId>configuration-feign</artifactId>-->
+<!--            <version>${project.parent.version}</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <modules>

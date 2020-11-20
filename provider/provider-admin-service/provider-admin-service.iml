@@ -130,7 +130,5 @@
     <orderEntry type="library" name="Maven: com.alibaba.spring:spring-context-support:1.0.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.10" level="project" />
     <orderEntry type="library" name="Maven: javax.persistence:javax.persistence-api:2.2" level="project" />
-    <orderEntry type="library" name="Maven: com.micheal.myshop.plus:commons-provider:0.0.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: com.micheal.myshop.plus:configuration-sentinel:0.0.1-SNAPSHOT" level="project" />
   </component>
 </module>
