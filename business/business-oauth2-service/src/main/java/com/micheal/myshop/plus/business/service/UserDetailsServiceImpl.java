@@ -3,6 +3,7 @@ package com.micheal.myshop.plus.business.service;
 import com.google.common.collect.Lists;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -24,7 +25,14 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        List<GrantedAuthority> grantedAuthorities = Lists.newArrayList();
-        return new User(username, password, grantedAuthorities);
+
+        // 用户名匹配
+        if (s.equals(username)) {
+            List<GrantedAuthority> grantedAuthorities = Lists.newArrayList();
+            GrantedAuthority grantedAuthority = new SimpleGrantedAuthority("USER");
+            grantedAuthorities.add(grantedAuthority);
+            return new User(username, password, grantedAuthorities);
+        }
+        return null;
     }
 }

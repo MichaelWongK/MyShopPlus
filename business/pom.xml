@@ -35,10 +35,10 @@
         </dependency>
 
         <!-- Spring Cloud Alibaba -->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
 
         <!-- Commons -->
         <dependency>
@@ -56,11 +56,11 @@
             <artifactId>commons-dto</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.micheal.myshop.plus</groupId>-->
-<!--            <artifactId>commons-utils</artifactId>-->
-<!--            <version>${project.parent.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.micheal.myshop.plus</groupId>
+            <artifactId>commons-utils</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
 <!--        <dependency>-->
 <!--            <groupId>com.micheal.myshop.plus</groupId>-->
 <!--            <artifactId>configuration-feign</artifactId>-->
