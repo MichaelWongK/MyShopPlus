@@ -162,6 +162,7 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:2.1.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:5.1.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.17" level="project" />
+    <orderEntry type="module" module-name="business-profile-feign" />
     <orderEntry type="module" module-name="provider-admin-api" />
     <orderEntry type="library" name="Maven: com.alibaba.nacos:nacos-client:1.1.3" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba.nacos:nacos-common:1.1.3" level="project" />
@@ -238,5 +239,6 @@
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.10" level="project" />
     <orderEntry type="module" module-name="commons-utils" />
     <orderEntry type="library" name="Maven: eu.bitwalker:UserAgentUtils:1.21" level="project" />
+    <orderEntry type="module" module-name="configuration-feign" />
   </component>
 </module>

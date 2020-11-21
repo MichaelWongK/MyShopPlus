@@ -3,19 +3,17 @@ package com.micheal.myshop.plus.business;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @author <a href="mailto:wangmk13@163.com">micheal.wang</a>
- * @date 2020/11/19 22:21
+ * @date 2020/11/21 19:59
  * @Description
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
-public class BusinessOAuth2Application {
+public class BusinessProfileApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BusinessOAuth2Application.class, args);
+        SpringApplication.run(BusinessProfileApplication.class, args);
     }
 }
