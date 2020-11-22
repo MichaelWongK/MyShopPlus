@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2020/11/19 17:34
  * @Description 用户注册
  */
-@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping(value = "reg")
 public class RegController {

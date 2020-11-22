@@ -30,7 +30,6 @@ import java.util.Objects;
  * @date 2020/11/20 17:53
  * @Description 登录管理
  */
-@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 public class LoginController {
 
