@@ -130,6 +130,7 @@ module.exports = {
     'no-shadow-restricted-names': 2,
     'no-spaced-func': 2,
     'no-sparse-arrays': 2,
+    "no-tabs":"off",
     'no-this-before-super': 2,
     'no-throw-literal': 2,
     'no-trailing-spaces': 2,
@@ -162,7 +163,7 @@ module.exports = {
       }
     }],
     'padded-blocks': [2, 'never'],
-    'quotes': [2, 'single', {
+    'quotes': [1, 'single', {
       'avoidEscape': true,
       'allowTemplateLiterals': true
     }],

@@ -37,7 +37,7 @@ spring:
       maximum-pool-size: 10
       auto-commit: true
       pool-name: MyHikariCP
-      max-lifetime: 1800000
+      max-lifetime: 1200000
       connection-timeout: 30000
       connection-test-query: SELECT 1
   redis:

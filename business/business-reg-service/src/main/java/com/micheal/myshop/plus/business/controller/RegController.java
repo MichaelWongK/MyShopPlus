@@ -5,7 +5,6 @@ import com.micheal.myshop.plus.provider.api.UmsAdminService;
 import com.micheal.myshop.plus.provider.domain.UmsAdmin;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
