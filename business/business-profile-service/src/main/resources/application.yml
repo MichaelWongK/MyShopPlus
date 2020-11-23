@@ -23,8 +23,8 @@ spring:
       discovery:
         server-addr: ${base.config.nacos.hostname}:${base.config.nacos.port}
     sentinel:
-      transport:
-        dashboard: ${base.config.sentile.hostname}:${base.config.sentile.port}
+#      transport:
+#        dashboard: ${base.config.sentile.hostname}:${base.config.sentile.port}
 
 security:
   oauth2:
