@@ -22,3 +22,27 @@ export function update(data) {
     data
   })
 }
+
+/**
+ * 修改密码
+ * @param {用户名} passwordParam 
+ */
+export function modifyPassword(data) {
+  return request({
+    url: '/profile/modify/password',
+    method: 'post',
+    data
+  })
+}
+
+/**
+ * 修改头像
+ * @param {用户名} iconParam 
+ */
+export function modifyIcon(data) {
+  return request({
+    url: '/profile/modify/icon',
+    method: 'post',
+    data
+  })
+}
