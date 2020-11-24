@@ -1,13 +1,9 @@
 package com.micheal.myshop.plus.commons.utils;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
+import okhttp3.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
@@ -86,6 +82,31 @@ public class OkHttpClientUtil {
     public Response postData(String url, Map<String, String> bodyParams) {
         // 构造 RequestBody
         RequestBody body = setRequestBody(bodyParams);
+        // 构造 Request
+        Request.Builder requestBuilder = new Request.Builder();
+        Request request = requestBuilder.post(body).url(url).build();
+        // 将 Request 封装为 Call
+        Call call = okHttpClient.newCall(request);
+        // 执行 Call，得到 Response
+        Response response = null;
+        try {
+            response = call.execute();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return response;
+    }
+
+    /**
+     * POST 请求，同步方式，提交文件
+     *
+     * @param url        请求地址
+     * @param multipartFile 请求参数
+     * @return {@link Response}
+     */
+    public Response postData1(String url, MultipartFile multipartFile) throws IOException {
+        // 构造 RequestBody
+        RequestBody body = setRequestBody(multipartFile);
         // 构造 Request
         Request.Builder requestBuilder = new Request.Builder();
         Request request = requestBuilder.post(body).url(url).build();
@@ -195,6 +216,27 @@ public class OkHttpClientUtil {
             }
         }
         body = formEncodingBuilder.build();
+        return body;
+    }
+
+    /**
+     * 构造 multipartFile POST 请求参数
+     *
+     * @param multipartFile 请求参数
+     * @return {@link RequestBody}
+     */
+    private RequestBody setRequestBody(MultipartFile multipartFile) throws IOException {
+        RequestBody body = null;
+        okhttp3.MultipartBody.Builder multiPartBuilder = new okhttp3.MultipartBody.Builder().setType(MultipartBody.FORM);
+
+        File file = FileConverterUtils.MultipartFileToFile(multipartFile);
+
+        if (multipartFile != null) {
+            multiPartBuilder.addFormDataPart(multipartFile.getName(),
+                multipartFile.getOriginalFilename(),
+                RequestBody.create(file, MediaType.parse(multipartFile.getContentType())));
+        }
+        body = multiPartBuilder.build();
         return body;
     }
 
