@@ -101,11 +101,11 @@
 <!--            <artifactId>commons-provider</artifactId>-->
 <!--            <version>${project.parent.version}</version>-->
 <!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.micheal.myshop.plus</groupId>-->
-<!--            <artifactId>configuration-sentinel</artifactId>-->
-<!--            <version>${project.parent.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.micheal.myshop.plus</groupId>
+            <artifactId>configuration-sentinel</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
     </dependencies>
 
     <modules>

@@ -3,9 +3,10 @@ base:
     nacos:
       hostname: micheal.wang
       port: 8848
-#    sentile:
-#      hostname: localhost
-#      port: 8080
+    sentile:
+#      hostname: micheal.wang
+      hostname: localhost
+      port: 8858
     redis:
       hostname: micheal.wang
       port: 26379
@@ -22,9 +23,9 @@ spring:
     nacos:
       discovery:
         server-addr: ${base.config.nacos.hostname}:${base.config.nacos.port}
-#    sentinel:
-#      transport:
-#        dashboard: ${base.config.sentile.hostname}:${base.config.sentile.port}
+    sentinel:
+      transport:
+        dashboard: ${base.config.sentile.hostname}:${base.config.sentile.port}
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver

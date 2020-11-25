@@ -1,5 +1,6 @@
 package com.micheal.myshop.plus.provider;
 
+import com.micheal.myshop.plus.configuration.DubboSentinelConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2020/11/19 11:17
  * @Description
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackageClasses = {ProviderAdminApplication.class, DubboSentinelConfiguration.class})
 @MapperScan(basePackages = "com.micheal.myshop.plus.provider.mapper")
 public class ProviderAdminApplication {
     public static void main(String[] args) {

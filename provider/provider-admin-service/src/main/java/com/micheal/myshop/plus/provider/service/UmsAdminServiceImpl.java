@@ -1,9 +1,11 @@
 package com.micheal.myshop.plus.provider.service;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.micheal.myshop.plus.provider.api.UmsAdminService;
 import com.micheal.myshop.plus.provider.domain.UmsAdmin;
 import com.micheal.myshop.plus.provider.mapper.UmsAdminMapper;
+import com.micheal.myshop.plus.provider.service.fallback.UmsAdminServiceFallback;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -33,6 +35,7 @@ public class UmsAdminServiceImpl implements UmsAdminService {
 
 
     @Override
+    @SentinelResource(value = "getByUsername", fallback = "getByUsernameFallback", fallbackClass = UmsAdminServiceFallback.class)
     public UmsAdmin get(String username) {
         QueryWrapper<UmsAdmin> queryWrapper = new QueryWrapper();
         queryWrapper.eq("username", username);

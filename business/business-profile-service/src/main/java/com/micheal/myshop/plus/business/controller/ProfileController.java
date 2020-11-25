@@ -1,5 +1,7 @@
 package com.micheal.myshop.plus.business.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.micheal.myshop.plus.business.controller.fallback.ProfileControllerFallback;
 import com.micheal.myshop.plus.business.dto.UmsAdminDTO;
 import com.micheal.myshop.plus.business.dto.params.ProfileParam;
 import com.micheal.myshop.plus.business.dto.params.IconParam;
@@ -36,6 +38,7 @@ public class ProfileController {
      * @return {@link ResponseResult}
      */
     @GetMapping(value = "/info/{username}")
+    @SentinelResource(value = "info", fallback = "infoFallback", fallbackClass = ProfileControllerFallback.class)
     public ResponseResult<UmsAdminDTO> info(@PathVariable String username) {
         UmsAdmin umsAdmin = umsAdminService.get(username);
         UmsAdminDTO umsAdminDTO = new UmsAdminDTO();

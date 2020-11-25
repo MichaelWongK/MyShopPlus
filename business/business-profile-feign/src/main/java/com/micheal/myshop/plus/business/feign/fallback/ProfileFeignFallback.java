@@ -1,6 +1,5 @@
 package com.micheal.myshop.plus.business.feign.fallback;
 
-import com.micheal.myshop.plus.business.dto.UmsAdminDTO;
 import com.micheal.myshop.plus.business.dto.params.ProfileParam;
 import com.micheal.myshop.plus.business.dto.params.IconParam;
 import com.micheal.myshop.plus.business.dto.params.PasswordParam;
@@ -17,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProfileFeignFallback implements ProfileFeign {
 
-    private static final String BREAKING_MESSAGE = "您的网络有问题，请检查";
+    public static final String BREAKING_MESSAGE = "您的网络有问题，请检查";
 
     @Override
     public String info(String username) {
@@ -29,7 +28,6 @@ public class ProfileFeignFallback implements ProfileFeign {
         return null;
     }
 
-    @Override
     public String update(ProfileParam profileParam) {
         try {
             return MapperUtils.obj2json(new ResponseResult<>(ResponseResult.CodeStatus.BREAKING, BREAKING_MESSAGE));
@@ -39,7 +37,6 @@ public class ProfileFeignFallback implements ProfileFeign {
         return null;
     }
 
-    @Override
     public String modifyPassword(PasswordParam passwordParam) {
         try {
             return MapperUtils.obj2json(new ResponseResult<>(ResponseResult.CodeStatus.BREAKING, BREAKING_MESSAGE));
@@ -49,7 +46,6 @@ public class ProfileFeignFallback implements ProfileFeign {
         return null;
     }
 
-    @Override
     public String modifyIcon(IconParam iconParam) {
         try {
             return MapperUtils.obj2json(new ResponseResult<>(ResponseResult.CodeStatus.BREAKING, BREAKING_MESSAGE));

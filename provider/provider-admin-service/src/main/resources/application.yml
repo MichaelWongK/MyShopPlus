@@ -1,8 +1,8 @@
 base:
   config:
-#    tidb:
-#      hostname: tidb.funtl.com
-#      port: 4000
+#    sentile:
+#      hostname: micheal.wang
+#      port: 8858
     nacos:
       hostname: micheal.wang
 #      hostname: 172.16.227.110
@@ -11,6 +11,14 @@ base:
 spring:
   application:
     name: ums-admin-provider
+#  cloud:
+##    nacos:
+##      discovery:
+##        server-addr: ${base.config.nacos.hostname}:${base.config.nacos.port}
+#    sentinel:
+#      transport:
+#        dashboard: ${base.config.sentile.hostname}:${base.config.sentile.port}
+#        client-ip:
   main:
     allow-bean-definition-overriding: true
   datasource:
