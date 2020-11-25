@@ -1,4 +1,4 @@
-package com.micheal.myshop.plus.business.dto.param;
+package com.micheal.myshop.plus.business.dto.params;
 
 import lombok.Data;
 

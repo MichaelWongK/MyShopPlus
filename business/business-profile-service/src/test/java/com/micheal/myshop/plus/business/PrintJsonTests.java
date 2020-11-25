@@ -1,6 +1,6 @@
 package com.micheal.myshop.plus.business;
 
-import com.micheal.myshop.plus.business.dto.ProfileParam;
+import com.micheal.myshop.plus.business.dto.params.ProfileParam;
 import com.micheal.myshop.plus.commons.utils.MapperUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;

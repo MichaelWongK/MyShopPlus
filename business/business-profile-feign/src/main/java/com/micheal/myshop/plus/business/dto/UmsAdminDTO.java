@@ -2,19 +2,20 @@ package com.micheal.myshop.plus.business.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @author <a href="mailto:wangmk13@163.com">micheal.wang</a>
- * @date 2020/11/23 10:27
- * @Description
+ * @date 2020/11/24 17:30
+ * @Description 用户信息
  */
 @Data
-public class ProfileParam {
+public class UmsAdminDTO implements Serializable {
 
     private Long id;
+
     private String username;
-    private String password;
 
     /**
      * 头像

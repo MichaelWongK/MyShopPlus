@@ -1,8 +1,9 @@
 package com.micheal.myshop.plus.business.feign;
 
-import com.micheal.myshop.plus.business.dto.ProfileParam;
-import com.micheal.myshop.plus.business.dto.param.IconParam;
-import com.micheal.myshop.plus.business.dto.param.PasswordParam;
+import com.micheal.myshop.plus.business.dto.params.ProfileParam;
+import com.micheal.myshop.plus.business.dto.params.IconParam;
+import com.micheal.myshop.plus.business.dto.params.PasswordParam;
+import com.micheal.myshop.plus.business.feign.fallback.ProfileFeignFallback;
 import com.micheal.myshop.plus.configuration.FeignRequestConfiguration;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @date 2020/11/21 20:31
  * @Description
  */
-@FeignClient(value = "business-profile", path = "profile", configuration = FeignRequestConfiguration.class)
+@FeignClient(value = "business-profile", path = "profile", configuration = FeignRequestConfiguration.class, fallback = ProfileFeignFallback.class)
 public interface ProfileFeign {
 
     /**

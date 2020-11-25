@@ -1,8 +1,9 @@
 package com.micheal.myshop.plus.business.controller;
 
-import com.micheal.myshop.plus.business.dto.ProfileParam;
-import com.micheal.myshop.plus.business.dto.param.IconParam;
-import com.micheal.myshop.plus.business.dto.param.PasswordParam;
+import com.micheal.myshop.plus.business.dto.UmsAdminDTO;
+import com.micheal.myshop.plus.business.dto.params.ProfileParam;
+import com.micheal.myshop.plus.business.dto.params.IconParam;
+import com.micheal.myshop.plus.business.dto.params.PasswordParam;
 import com.micheal.myshop.plus.commons.dto.ResponseResult;
 import com.micheal.myshop.plus.provider.api.UmsAdminService;
 import com.micheal.myshop.plus.provider.domain.UmsAdmin;
@@ -35,9 +36,11 @@ public class ProfileController {
      * @return {@link ResponseResult}
      */
     @GetMapping(value = "/info/{username}")
-    public ResponseResult<UmsAdmin> info(@PathVariable String username) {
+    public ResponseResult<UmsAdminDTO> info(@PathVariable String username) {
         UmsAdmin umsAdmin = umsAdminService.get(username);
-        return new ResponseResult<UmsAdmin>(ResponseResult.CodeStatus.OK, "查询用户信息", umsAdmin);
+        UmsAdminDTO umsAdminDTO = new UmsAdminDTO();
+        BeanUtils.copyProperties(umsAdmin, umsAdminDTO);
+        return new ResponseResult<UmsAdminDTO>(ResponseResult.CodeStatus.OK, "查询用户信息", umsAdminDTO);
     }
 
 

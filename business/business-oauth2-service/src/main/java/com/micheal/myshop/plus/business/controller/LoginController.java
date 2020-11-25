@@ -9,6 +9,7 @@ import com.micheal.myshop.plus.commons.utils.MapperUtils;
 import com.micheal.myshop.plus.commons.utils.OkHttpClientUtil;
 import com.micheal.myshop.plus.provider.domain.UmsAdmin;
 import okhttp3.Response;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
@@ -93,6 +94,11 @@ public class LoginController {
 
         String jsonString = profileFeign.info(authentication.getName());
         UmsAdmin umsAdmin = MapperUtils.json2pojoByTree(jsonString, "data", UmsAdmin.class);
+
+        // 熔断后的结果
+        if (umsAdmin == null) {
+            return MapperUtils.json2pojo(jsonString, ResponseResult.class);
+        }
 
         LoginInfo loginInfo = new LoginInfo();
         loginInfo.setName(umsAdmin.getUsername());
