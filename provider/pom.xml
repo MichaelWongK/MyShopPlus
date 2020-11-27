@@ -96,11 +96,11 @@
         </dependency>
 
         <!-- Projects -->
-<!--        <dependency>-->
-<!--            <groupId>com.micheal.myshop.plus</groupId>-->
-<!--            <artifactId>commons-provider</artifactId>-->
-<!--            <version>${project.parent.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.micheal.myshop.plus</groupId>
+            <artifactId>commons-provider</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.micheal.myshop.plus</groupId>
             <artifactId>configuration-sentinel</artifactId>
@@ -111,7 +111,7 @@
     <modules>
         <module>provider-admin-api</module>
         <module>provider-admin-service</module>
-<!--        <module>provider-admin-login-log-api</module>-->
-<!--        <module>provider-admin-login-log-service</module>-->
+        <module>provider-admin-login-log-api</module>
+        <module>provider-admin-login-log-service</module>
     </modules>
 </project>

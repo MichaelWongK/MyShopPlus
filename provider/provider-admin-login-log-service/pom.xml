@@ -9,10 +9,8 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>provider-admin-service</artifactId>
+    <artifactId>provider-admin-login-log-service</artifactId>
     <packaging>jar</packaging>
-    <url>http://www.funtl.com</url>
-    <inceptionYear>2018-Now</inceptionYear>
 
     <licenses>
         <license>
@@ -45,12 +43,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Spring Cloud -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-oauth2</artifactId>
-        </dependency>
-
         <!-- DataSource -->
         <dependency>
             <groupId>com.zaxxer</groupId>
@@ -71,16 +63,16 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.baomidou</groupId>-->
-<!--            <artifactId>mybatis-plus-boot-starter</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
 
         <!-- Projects -->
         <dependency>
             <groupId>com.micheal.myshop.plus</groupId>
-            <artifactId>provider-admin-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <artifactId>provider-admin-login-log-api</artifactId>
+            <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
 
@@ -90,7 +82,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.micheal.myshop.plus.provider.ProviderAdminApplication</mainClass>
+                    <mainClass>com.micheal.myshop.plus.provider.ProviderAdminLoginLogApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
