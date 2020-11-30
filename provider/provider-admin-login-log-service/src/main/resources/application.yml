@@ -14,7 +14,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://micheal.wang:3306/myplus_ums_admin_login_log?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong&useSSL=false
     username: root
-    password: mingkai13
+    password: 
     hikari:
       minimum-idle: 5
       idle-timeout: 600000
